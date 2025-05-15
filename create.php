@@ -1,12 +1,12 @@
 <?php include 'db.php';
 
-include 'header.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $pdo->prepare("INSERT INTO articulos (codigo, descripcion, precio) VALUES (?, ?, ?)");
     $stmt->execute([$_POST['codigo'], $_POST['descripcion'], $_POST['precio']]);
     header("Location: index.php");
 }
+
+include 'header.php';
 ?>
 
 <form method="POST">
