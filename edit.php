@@ -1,4 +1,4 @@
-<?php include 'db.php'; include 'header.php';
+<?php include 'db.php';
 
 $id = $_GET['id'];
 $stmt = $pdo->prepare("SELECT * FROM articulos WHERE id = ?");
@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([$_POST['codigo'], $_POST['descripcion'], $_POST['precio'], $id]);
     header("Location: index.php");
 }
+include 'header.php';
 ?>
 
 <form method="POST">

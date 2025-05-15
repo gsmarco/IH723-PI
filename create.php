@@ -1,4 +1,6 @@
-<?php include 'db.php'; include 'header.php';
+<?php include 'db.php';
+
+include 'header.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $pdo->prepare("INSERT INTO articulos (codigo, descripcion, precio) VALUES (?, ?, ?)");
@@ -14,11 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <div class="mb-3">
         <label>Descripción</label>
-        <textarea name="descripcion" class="form-control"></textarea>
+        <textarea name="descripcion" class="form-control" required></textarea>
     </div>
     <div class="mb-3">
         <label>Precio</label>
-        <input type="number" step="0.01" name="precio" class="form-control">
+        <input type="number" step="0.01" name="precio" class="form-control" required>
     </div>
     <button type="submit" class="btn btn-success">Guardar</button>
     <a href="index.php" class="btn btn-secondary">Cancelar</a>

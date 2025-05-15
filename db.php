@@ -5,6 +5,11 @@ $dbname = "catalogo_t804";
 $user = "gsmarco";
 $pass = "mm0XqtKjmX3TNEVdujzXZFZQfHP5hNDe";
 
+// $host = "localhost";
+// $dbname = "catalogo";
+// $user = "gsmarco";
+// $pass = "Olga0322";
+
 try {
     $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $pass);
 } catch (PDOException $e) {

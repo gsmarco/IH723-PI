@@ -1,4 +1,4 @@
-<?php include 'db.php'; include 'header.php';
+<?php include 'db.php';
 
 $limit = 10;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -28,6 +28,9 @@ $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
 $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 $productos = $stmt->fetchAll();
+
+include 'header.php';
+
 ?>
 
 <form class="mb-3" method="GET" action="">
