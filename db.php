@@ -1,14 +1,5 @@
 <?php
-$host = "localhost";
-$dbname = "catalogo";
-$user = "gsmarco";
-$pass = "Olga0322";
-
-$host = "dpg-d0hu5fa4d50c73ativ60-a.oregon-postgres.render.com";
-$dbname = "catalogo_e4mp";
-$user = "omar_diaz";
-$pass = "St709HGRxBiWkjESWFnr5xhy7WJuqvHh";
-
+// Acceso a la base de datos de PostreSQL en un servidor de RENDER
 $host = "dpg-d076lls9c44c739o31lg-a.frankfurt-postgres.render.com";
 $dbname = "catalogo_t804";
 $user = "gsmarco";
